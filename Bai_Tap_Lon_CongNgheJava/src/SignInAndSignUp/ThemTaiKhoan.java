@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 
 import javax.swing.JOptionPane;
 
+import Main.MainLG;
+
 public class ThemTaiKhoan extends javax.swing.JFrame {
     public ThemTaiKhoan() {
         initComponents();
@@ -151,6 +153,8 @@ public class ThemTaiKhoan extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(this, "Don't leave information blank");
                 } else if (n != 0) {
                     JOptionPane.showMessageDialog(this, "Registration successful, please log in again");
+                    MainLG m = new MainLG("src/images/gamemusic.wav");
+                    m.setVisible(true);
                     this.dispose();
                 } else {
                     JOptionPane.showMessageDialog(this, "Registration failed");
